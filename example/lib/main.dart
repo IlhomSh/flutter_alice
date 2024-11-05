@@ -36,9 +36,9 @@ class _MyAppState extends State<MyApp> {
     _dio = Dio(BaseOptions(followRedirects: false));
     _dio.interceptors.add(_alice.getDioInterceptor());
     _httpClient = HttpClient();
-    _chopper = ChopperClient(
-      interceptors: _alice.getChopperInterceptor(),
-    );
+    // _chopper = ChopperClient(
+    //   interceptors: _alice.getChopperInterceptor(),
+    // );
     _postsService = PostsService.create(_chopper);
 
     super.initState();
